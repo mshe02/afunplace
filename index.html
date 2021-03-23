@@ -1,71 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-	<meta charset="UTF-8">
-	<title></title>
-	<script src="js/JustAddMusic.js"></script>
-	<style type="text/css">
-		body {
-			margin:0;
-			background: #333;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			box-sizing: border-box;
-		}
-		.jam-drop { border: solid 20px #CF3;  } /* draw an outline when a file is dragged over the drop target */
-		.jam-ui { font-size: 18px; } /* make the UI text a bit bigger than usual */
-		.bar {
-			height:100%;
-			width: 32%;
-			background: #222;
-			position: absolute;
-			bottom: 0;
-		}
-		#bar2 { left: 33%; width:34%; }
-		#bar3 { left: 68%; }
-	</style>
-</head>
-<body>
-	<div id="bar1" class="bar"></div>
-	<div id="bar2" class="bar"></div>
-	<div id="bar3" class="bar"></div>
-	<script>
-		var hue = 60;
-		
-		// create a new JAM instance:
-		var jam = new JustAddMusic({
-			 // default audio to load:
-			src: "assets/bensound-dubstep.mp3",
+<style>
+  @keyframes animBG {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
 
-			// this fires when the track ends:
-			onended: function() { console.log("ended"); },
-			
-			// label text to include in the UI (bottom left)
-			label: "<b>JustAddMusic.js </b>", 
-			
-			// the ontick callback, called 60 time per second by default
-			// with the latest audio data object as the only parameter
-			ontick: function(o) {
-				// update the bar heights based on instantaneous values:
-				bar1.style.height = o.low.val * 100+"%";
-				bar2.style.height = o.mid.val * 100+"%";
-				bar3.style.height = o.high.val * 100+"%";
-				
-				// change the hue on each hit:
-				if (o.low.hit) { hue = (hue+100)%360; }
-				
-				// vary the saturation and lightness based on the avg volume:
-				let n = o.all.avg*100;
-				
-				// update the body background color:
-				document.body.style.background = "hsl("+ hue +","+ n*0.6 +"%,"+ (n*0.4+10) +"%)";
-				
-				// grab the label and update its color:
-				var label = document.body.querySelector(".jam-ui b");
-				label.style.color = "hsl("+ hue +",60%,50%)";
-			}
-		});
-	</script>
+  body {
+    background: linear-gradient(230deg, #F5CB47, #FFBFF8, #FAFFBF);
+    background-size: 300% 300%;
+    animation: animBG 30s infinite;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+  }
+</style>
+
+<text> (´∩｡• ᵕ •｡∩`) </text>
+  <body>
+    <p>
+      <a href="https://www.google.com">♡ Click this ♡</a>
+      <br><br>
+<img src="https://data.whicdn.com/images/46054908/original.gif">
+    </p>
 </body>
-</html>
+<marquee behavior="alternate" direction="up" width="80%"><marquee direction="right">𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘮𝘺 𝘱𝘭𝘢𝘺𝘨𝘳𝘰𝘶𝘯𝘥 ☻ 𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘮𝘺 𝘱𝘭𝘢𝘺𝘨𝘳𝘰𝘶𝘯𝘥 ☻ 𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘮𝘺 𝘱𝘭𝘢𝘺𝘨𝘳𝘰𝘶𝘯𝘥 ☻</marquee></marquee>
+
+<br><br>
+
+<html> <head><style type="text/css"> div {border:2px solid #a1a1;padding:10px 40px; background:#ffdddd;width:400px;border-radius:25px;-moz-border-radius:40px; }
+
+</style></head><body><div>Random border filling up the border lol</div></body></html>
+
+<iframe width="0" height="0" src="https://www.youtuberepeater.com/watch?v=I2_NC900qYM#gsc.tab=0" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+
+
+
+
